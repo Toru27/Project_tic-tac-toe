@@ -33,34 +33,42 @@ function tablePlay() {
                     if(test1.classList.contains("square") && test2.classList.contains("square") && test3.classList.contains("square")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("playerXwon");
+                        document.querySelector(".player").innerHTML = "Player X won!";
                     }
                     else if(test4.classList.contains("square") && test5.classList.contains("square") && test6.classList.contains("square")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("playerXwon");
+                        document.querySelector(".player").innerHTML = "Player X won!";
                     }
                     else if(test7.classList.contains("square") && test8.classList.contains("square") && test9.classList.contains("square")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("playerXwon");
+                        document.querySelector(".player").innerHTML = "Player X won!";
                     }
                     else if(test1.classList.contains("square") && test4.classList.contains("square") && test7.classList.contains("square")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("playerXwon");
+                        document.querySelector(".player").innerHTML = "Player X won!";
                     }
                     else if(test2.classList.contains("square") && test5.classList.contains("square") && test8.classList.contains("square")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("playerXwon");
+                        document.querySelector(".player").innerHTML = "Player X won!";
                     }
                     else if(test3.classList.contains("square") && test6.classList.contains("square") && test9.classList.contains("square")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("playerXwon");
+                        document.querySelector(".player").innerHTML = "Player X won!";
                     }
                     else if(test1.classList.contains("square") && test5.classList.contains("square") && test9.classList.contains("square")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("playerXwon");
+                        document.querySelector(".player").innerHTML = "Player X won!";
                     }
                     else if(test3.classList.contains("square") && test5.classList.contains("square") && test7.classList.contains("square")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("playerXwon");
+                        document.querySelector(".player").innerHTML = "Player X won!";
                     }
                 }
             }
@@ -72,34 +80,42 @@ function tablePlay() {
                     if(test1.classList.contains("circle") && test2.classList.contains("circle") && test3.classList.contains("circle")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("player0won");
+                        document.querySelector(".player").innerHTML = "Player 0 won!";
                     }
                     else if(test4.classList.contains("circle") && test5.classList.contains("circle") && test6.classList.contains("circle")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("player0won");
+                        document.querySelector(".player").innerHTML = "Player 0 won!";
                     }
                     else if(test7.classList.contains("circle") && test8.classList.contains("circle") && test9.classList.contains("circle")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("player0won");
+                        document.querySelector(".player").innerHTML = "Player 0 won!";
                     }
                     else if(test1.classList.contains("circle") && test4.classList.contains("circle") && test7.classList.contains("circle")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("player0won");
+                        document.querySelector(".player").innerHTML = "Player 0 won!";
                     }
                     else if(test2.classList.contains("scircle") && test5.classList.contains("circle") && test8.classList.contains("circle")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("player0won");
+                        document.querySelector(".player").innerHTML = "Player 0 won!";
                     }
                     else if(test3.classList.contains("circle") && test6.classList.contains("circle") && test9.classList.contains("circle")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("player0won");
+                        document.querySelector(".player").innerHTML = "Player 0 won!";
                     }
                     else if(test1.classList.contains("circle") && test5.classList.contains("circle") && test9.classList.contains("circle")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("player0won");
+                        document.querySelector(".player").innerHTML = "Player 0 won!";
                     }
                     else if(test3.classList.contains("circle") && test5.classList.contains("circle") && test7.classList.contains("circle")) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("player0won");
+                        document.querySelector(".player").innerHTML = "Player 0 won!";
                     }
                 }
             }
