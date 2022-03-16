@@ -135,6 +135,7 @@ function tablePlay() {
         resetButton.addEventListener("click", () => {
         winbar.classList.remove("player0won");
         winbar.classList.remove("playerXwon");
+        winbar.classList.remove("tie");
         winbar.classList.add("hidden");
         box.classList.remove("square");
         box.classList.remove("circle");
