@@ -1,5 +1,7 @@
 winbar = document.querySelector(".winbar");
 let numberSwitch = 1;
+let playerX = 0;
+let player0 = 0;
 let elemBy = [];
 
 let test1;
@@ -10,6 +12,7 @@ let test5;
 let test6;
 let test7;
 let test8;
+let test9;
 
 function tablePlay() {
     document.querySelectorAll(".box").forEach(box => {
@@ -30,46 +33,17 @@ function tablePlay() {
                     box.classList.add("square");
                     numberSwitch++;
 
-                    if(test1.classList.contains("square") && test2.classList.contains("square") && test3.classList.contains("square")) {
+                    if((test1.classList.contains("square") && test2.classList.contains("square") && test3.classList.contains("square")) || (test4.classList.contains("square") && test5.classList.contains("square") && test6.classList.contains("square"))
+                    || (test7.classList.contains("square") && test8.classList.contains("square") && test9.classList.contains("square")) || (test1.classList.contains("square") && test4.classList.contains("square") && test7.classList.contains("square"))
+                    || (test2.classList.contains("square") && test5.classList.contains("square") && test8.classList.contains("square")) || (test3.classList.contains("square") && test6.classList.contains("square") && test9.classList.contains("square"))
+                    || (test1.classList.contains("square") && test5.classList.contains("square") && test9.classList.contains("square")) || (test3.classList.contains("square") && test5.classList.contains("square") && test7.classList.contains("square"))) {
                         winbar.classList.remove("hidden");
-                        winbar.classList.add("playerXwon");
+                        winbar.classList.add("playerXwon");                      
+                        playerX++;
                         document.querySelector(".player").innerHTML = "Player X won!";
+                        document.querySelector("#playerX").innerHTML = `Player <span>X</span> wins: ${playerX}`;
                     }
-                    else if(test4.classList.contains("square") && test5.classList.contains("square") && test6.classList.contains("square")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("playerXwon");
-                        document.querySelector(".player").innerHTML = "Player X won!";
-                    }
-                    else if(test7.classList.contains("square") && test8.classList.contains("square") && test9.classList.contains("square")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("playerXwon");
-                        document.querySelector(".player").innerHTML = "Player X won!";
-                    }
-                    else if(test1.classList.contains("square") && test4.classList.contains("square") && test7.classList.contains("square")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("playerXwon");
-                        document.querySelector(".player").innerHTML = "Player X won!";
-                    }
-                    else if(test2.classList.contains("square") && test5.classList.contains("square") && test8.classList.contains("square")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("playerXwon");
-                        document.querySelector(".player").innerHTML = "Player X won!";
-                    }
-                    else if(test3.classList.contains("square") && test6.classList.contains("square") && test9.classList.contains("square")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("playerXwon");
-                        document.querySelector(".player").innerHTML = "Player X won!";
-                    }
-                    else if(test1.classList.contains("square") && test5.classList.contains("square") && test9.classList.contains("square")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("playerXwon");
-                        document.querySelector(".player").innerHTML = "Player X won!";
-                    }
-                    else if(test3.classList.contains("square") && test5.classList.contains("square") && test7.classList.contains("square")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("playerXwon");
-                        document.querySelector(".player").innerHTML = "Player X won!";
-                    }
+                
                     else if((test1.classList.contains("square") || test1.classList.contains("circle")) && (test2.classList.contains("square") || test2.classList.contains("circle")) && (test3.classList.contains("square") || test3.classList.contains("circle")) && (test4.classList.contains("square") || test4.classList.contains("circle")) && (test5.classList.contains("square") || test5.classList.contains("circle")) && (test6.classList.contains("square") || test6.classList.contains("circle")) && (test7.classList.contains("square") || test7.classList.contains("circle")) && (test8.classList.contains("square") || test8.classList.contains("circle")) && (test9.classList.contains("square") || test9.classList.contains("circle"))) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("tie");
@@ -82,46 +56,17 @@ function tablePlay() {
                     box.classList.add("circle");
                     numberSwitch++;
 
-                    if(test1.classList.contains("circle") && test2.classList.contains("circle") && test3.classList.contains("circle")) {
+                    if((test1.classList.contains("circle") && test2.classList.contains("circle") && test3.classList.contains("circle")) || (test4.classList.contains("circle") && test5.classList.contains("circle") && test6.classList.contains("circle"))
+                    || (test7.classList.contains("circle") && test8.classList.contains("circle") && test9.classList.contains("circle")) || (test1.classList.contains("circle") && test4.classList.contains("circle") && test7.classList.contains("circle"))
+                    || (test2.classList.contains("circle") && test5.classList.contains("circle") && test8.classList.contains("circle")) || (test3.classList.contains("circle") && test6.classList.contains("circle") && test9.classList.contains("circle"))
+                    || (test1.classList.contains("circle") && test5.classList.contains("circle") && test9.classList.contains("circle")) || (test3.classList.contains("circle") && test5.classList.contains("circle") && test7.classList.contains("circle"))) {
                         winbar.classList.remove("hidden");
-                        winbar.classList.add("player0won");
+                        winbar.classList.add("player0won");               
+                        player0++;
                         document.querySelector(".player").innerHTML = "Player 0 won!";
+                        document.querySelector("#player0").innerHTML = `Player <span>0</span> wins: ${player0}`;
                     }
-                    else if(test4.classList.contains("circle") && test5.classList.contains("circle") && test6.classList.contains("circle")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("player0won");
-                        document.querySelector(".player").innerHTML = "Player 0 won!";
-                    }
-                    else if(test7.classList.contains("circle") && test8.classList.contains("circle") && test9.classList.contains("circle")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("player0won");
-                        document.querySelector(".player").innerHTML = "Player 0 won!";
-                    }
-                    else if(test1.classList.contains("circle") && test4.classList.contains("circle") && test7.classList.contains("circle")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("player0won");
-                        document.querySelector(".player").innerHTML = "Player 0 won!";
-                    }
-                    else if(test2.classList.contains("scircle") && test5.classList.contains("circle") && test8.classList.contains("circle")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("player0won");
-                        document.querySelector(".player").innerHTML = "Player 0 won!";
-                    }
-                    else if(test3.classList.contains("circle") && test6.classList.contains("circle") && test9.classList.contains("circle")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("player0won");
-                        document.querySelector(".player").innerHTML = "Player 0 won!";
-                    }
-                    else if(test1.classList.contains("circle") && test5.classList.contains("circle") && test9.classList.contains("circle")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("player0won");
-                        document.querySelector(".player").innerHTML = "Player 0 won!";
-                    }
-                    else if(test3.classList.contains("circle") && test5.classList.contains("circle") && test7.classList.contains("circle")) {
-                        winbar.classList.remove("hidden");
-                        winbar.classList.add("player0won");
-                        document.querySelector(".player").innerHTML = "Player 0 won!";
-                    }
+                    
                     else if((test1.classList.contains("square") || test1.classList.contains("circle")) && (test2.classList.contains("square") || test2.classList.contains("circle")) && (test3.classList.contains("square") || test3.classList.contains("circle")) && (test4.classList.contains("square") || test4.classList.contains("circle")) && (test5.classList.contains("square") || test5.classList.contains("circle")) && (test6.classList.contains("square") || test6.classList.contains("circle")) && (test7.classList.contains("square") || test7.classList.contains("circle")) && (test8.classList.contains("square") || test8.classList.contains("circle")) && (test9.classList.contains("square") || test9.classList.contains("circle"))) {
                         winbar.classList.remove("hidden");
                         winbar.classList.add("tie");
