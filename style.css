@@ -5,7 +5,7 @@
 }
 
 :root {
-    --tile-size: calc(5vh + 5vw);
+    --tile-size: 8rem;
     --x-size: calc(var(--tile-size) * .8);
     --x0-size: calc(var(--tile-size) * .4);
     --zero-width: calc(var(--tile-size) * .4);
@@ -354,5 +354,30 @@
     to {
         text-shadow: 4px -3px 3px lime;
         color: greenyellow;
+    }
+}
+
+
+@media only screen and (max-width: 1050px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .title {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .title {
+        font-size: 1.2rem;
     }
 }
