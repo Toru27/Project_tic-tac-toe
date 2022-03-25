@@ -23,7 +23,7 @@
 .container::after {
     position: absolute;
     content: "";
-    background: url("x0.jpg");
+    background: linear-gradient(to right bottom, greenyellow, lime,rgb(28, 28, 28), rgb(28, 28, 28) 35%,rgb(28, 28, 28),rgb(28, 28, 28),rgb(28, 28, 28), darkviolet, deeppink);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,15 +44,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     gap: 15px;
     color: aliceblue;
     text-shadow: 2px -1px 2px grey;
-    width: 300px;
-    height: 80px;
+    max-width: 300px;
+    height: 90px;
     border: solid 2px rgb(78, 78, 78);
     border-radius: 5px;
     box-shadow: 2px 2px 3px 1px rgb(78, 78, 78);
+    padding: 10px 20px;
     /* z-index: -1; */
 }
 
@@ -67,42 +68,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: cell;
 }
 
 .box:first-child {
-    box-shadow: 4px 3px 5px 0px white;
+    box-shadow: 4px 4px 3px 0px white;
 }
 
 .box:nth-child(2) {
-    box-shadow: 4px 3px 5px 0px white, -4px 3px 5px 0px white;
+    box-shadow: 4px 4px 3px 0px white, -4px 4px 3px 0px white;
 }
 
 .box:nth-child(3) {
-    box-shadow: -4px 3px 5px 0px white;
+    box-shadow: -4px 4px 3px 0px white;
 }
 
 .box:nth-child(4) {
-    box-shadow: 4px 3px 5px 0px white, 4px -3px 5px 0px white;
+    box-shadow: 4px 4px 3px 0px white, 4px -4px 3px 0px white;
 }
 
 .box:nth-child(5) {
-    box-shadow: 4px 3px 5px 0px white, -4px 3px 5px 0px white, 4px -3px 5px 0px white;
+    box-shadow: 4px 4px 3px 0px white, -4px 4px 3px 0px white, 4px -4px 3px 0px white;
 }
 
 .box:nth-child(6) {
-    box-shadow: -4px 3px 5px 0px white, -4px -3px 5px 0px white;
+    box-shadow: -4px 4px 3px 0px white, -4px -4px 3px 0px white;
 }
 
 .box:nth-child(7) {
-    box-shadow: 4px -3px 5px 0px white;
+    box-shadow: 4px -4px 3px 0px white;
 }
 
 .box:nth-child(8) {
-    box-shadow: 4px -3px 5px 0px white, -4px -3px 5px 0px white;
+    box-shadow: 4px -4px 3px 0px white, -4px -4px 3px 0px white;
 }
 
 .box:nth-child(9) {
-    box-shadow: -4px -3px 5px 0px white;
+    box-shadow: -4px -4px 3px 0px white;
 }
 
 .box:first-child,
@@ -129,13 +131,13 @@
     border-bottom: none;
 }
 
-.square {
+.playerX {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.square::after {
+.playerX::after {
     position: absolute;
     transform: rotate(-45deg);
     content: "";
@@ -146,7 +148,7 @@
     /* z-index: -3; */
 }
 
-.square::before {
+.playerX::before {
     position: absolute;
     transform: rotate(45deg);
     content: "";
@@ -157,13 +159,13 @@
     /* z-index: -3; */
 }
 
-.circle {
+.player0 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.circle::after {
+.player0::after {
     position: absolute;
     content: "";
     background-color: transparent;
@@ -206,7 +208,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.85);
+    background: linear-gradient(to bottom right, rgba(20, 20, 20, 0.98), rgba(30, 30, 30, 0.98), rgba(20, 20, 20, 0.98));
     z-index: 98;
 }
 
@@ -229,7 +231,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.85);
+    background: linear-gradient(to bottom right, rgba(20, 20, 20, 0.98), rgba(30, 30, 30, 0.98), rgba(20, 20, 20, 0.98));
     z-index: 98;
 }
 
@@ -252,13 +254,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background: linear-gradient(to bottom right, rgba(20, 20, 20, 0.98), rgba(30, 30, 30, 0.98), rgba(20, 20, 20, 0.98));
     z-index: 98;
 }
 
-button {
-    height: 50px;
-    width: 100px;
+.resettable {
+    padding: 15px 10px;
     font-size: 1rem;
     background-color: royalblue;
     border: solid 2px steelblue;
@@ -266,12 +267,33 @@ button {
     border-radius: 5px;
     color: aliceblue;
     z-index: 99;
+    cursor: pointer
 }
 
-button:active {
+.resetscore {
+    font-size: 0.8rem;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    align-self: center;
+    padding: 0px 10px;
+    background-color: MediumSlateBlue;
+    border: solid 1px LightSteelBlue;
+    box-shadow: 0px 0px 1px 1px LightSteelBlue;
+    border-radius: 5px;
+    color: SpringGreen;
+}
+
+.resetscore:active {
+    font-size: 0.78rem;
+    background-color: MediumPurple;
+    box-shadow: 0px 0px 1px 0.3px LightSteelBlue;
+}
+
+.resettable:active {
     background-color: lightskyblue;
     box-shadow: 0px 0px 1px 1px steelblue;
-    font-size: 0.9rem;
+    font-size: 0.97rem;
 }
 
 .hidden {
